@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "pl_ingest_daily"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5851eaa7-a96c-8c4b-4e5d-dc8869219920"
+  }
+}
