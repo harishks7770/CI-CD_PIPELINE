@@ -20,21 +20,11 @@
 # META   }
 # META }
 
-# CELL ********************
+# PARAMETERS CELL ********************
 
-# Welcome to your new notebook
-# Type here in the cell editor to add code!
-
-
-# METADATA ********************
-
-# META {
-# META   "language": "python",
-# META   "language_group": "synapse_pyspark"
-# META }
-
-# CELL ********************
-
+# Parameters Cell
+EnvironmentName = "DEV"
+TargetLakehouse = "lh_sales_dev"
 
 # METADATA ********************
 
