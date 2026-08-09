@@ -21,6 +21,7 @@
 EnvironmentName = "DEV"
 TargetLakehouse = "lh_sales_dev"
 
+name="harihs"
 # METADATA ********************
 
 # META {
