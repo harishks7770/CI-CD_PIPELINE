@@ -22,3 +22,10 @@ It implements a **selective deployment pattern**, ensuring only modified or targ
 │ DEV Stage   │ ──> │ TEST Stage  │ ──> │ PROD Stage  │
 │ Workspace   │     │ Workspace   │     │ Workspace   │
 └─────────────┘     └─────────────┘     └─────────────┘
+
+
+## 🛠️ Tech Stack
+
+* **CI/CD & Source:** Git ➔ GitHub Actions / Azure Pipelines
+* **Automation:** Python 3.11 (Selective Diff Scripting) ➔ Fabric REST API
+* **Environments:** Microsoft Fabric Workspaces (`DEV` ➔ `TEST` ➔ `PROD`)
