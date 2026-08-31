@@ -1,18 +1,15 @@
 name: Fabric Auto-Deploy
 
-# 1. THE TRIGGER
 on:
   push:
     branches: [ main ]
-  workflow_dispatch: # Keeps the manual button available as a backup
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      
-      # 2. THE HANDSHAKE
-      - name: Get Azure Token
+      - name: Get Azure Access Token
         run: |
           TOKEN=$(curl -s -X POST https://login.microsoftonline.com/${{ secrets.AZURE_TENANT_ID }}/oauth2/v2.0/token \
             -d 'client_id=${{ secrets.AZURE_CLIENT_ID }}' \
@@ -20,8 +17,7 @@ jobs:
             -d 'client_secret=${{ secrets.AZURE_CLIENT_SECRET }}' \
             -d 'grant_type=client_credentials' | jq -r .access_token)
           echo "FABRIC_TOKEN=$TOKEN" >> $GITHUB_ENV
-          
-      # 3. THE COMMAND
+
       - name: Trigger Fabric Deployment
         run: |
           curl -X POST https://api.fabric.microsoft.com/v1/deploymentPipelines/86d8facc-25b0-4e36-bbc4-9d9965c01d66/deploy \
