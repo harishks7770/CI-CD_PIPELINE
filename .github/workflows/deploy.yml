@@ -24,7 +24,7 @@ jobs:
       # 3. THE COMMAND
       - name: Trigger Fabric Deployment
         run: |
-          curl -X POST https://api.fabric.microsoft.com/v1/deploymentPipelines/https://app.fabric.microsoft.com/pipelines/86d8facc-25b0-4e36-bbc4-9d9965c01d66?experience=fabric-developerg/deploy \
+          curl -X POST https://api.fabric.microsoft.com/v1/deploymentPipelines/86d8facc-25b0-4e36-bbc4-9d9965c01d66/deploy \
           -H "Authorization: Bearer ${{ env.FABRIC_TOKEN }}" \
           -H "Content-Type: application/json" \
           -d '{
