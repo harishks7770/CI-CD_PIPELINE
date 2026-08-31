@@ -3,8 +3,8 @@ name: Fabric Auto-Deploy
 # 1. THE TRIGGER
 on:
   push:
-    branches:
-      - main 
+    branches: [ main ]
+  workflow_dispatch: # Keeps the manual button available as a backup
 
 jobs:
   deploy:
