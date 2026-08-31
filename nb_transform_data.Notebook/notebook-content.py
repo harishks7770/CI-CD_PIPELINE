@@ -25,6 +25,8 @@ TargetLakehouse = "lh_sales_dev"
 
 #2.new change has been made
 
+#3.new change has been made
+
 name="harihs"
 
 # METADATA ********************
