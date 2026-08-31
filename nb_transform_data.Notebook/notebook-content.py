@@ -20,8 +20,13 @@
 # Parameters Cell
 EnvironmentName = "DEV"
 TargetLakehouse = "lh_sales_dev"
+#changes made in notebook
+
+
+#2.new change has been made
 
 name="harihs"
+
 # METADATA ********************
 
 # META {

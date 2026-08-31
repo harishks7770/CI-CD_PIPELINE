@@ -1,0 +1,68 @@
+table sales_fact
+	lineageTag: 887c86e8-9c13-4d48-8a95-c46c21fff928
+	sourceLineageTag: [dbo].[sales_fact]
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 7355c053-5c91-4d1a-971e-8b40d75545a6
+		sourceLineageTag: id
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_name
+		dataType: string
+		lineageTag: 517886bb-ac83-4e2d-b24a-319dc9992aaa
+		sourceLineageTag: customer_name
+		summarizeBy: none
+		sourceColumn: customer_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column product
+		dataType: string
+		lineageTag: dc42e952-a253-4218-9cf2-1baf20e1d707
+		sourceLineageTag: product
+		summarizeBy: none
+		sourceColumn: product
+
+		annotation SummarizationSetBy = Automatic
+
+	column quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: ef0c3864-4214-4231-b78d-1020bb0d7bac
+		sourceLineageTag: quantity
+		summarizeBy: sum
+		sourceColumn: quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column price
+		dataType: int64
+		formatString: 0
+		lineageTag: 36ccaa0c-46eb-4b03-91ce-f69926b8840d
+		sourceLineageTag: price
+		summarizeBy: sum
+		sourceColumn: price
+
+		annotation SummarizationSetBy = Automatic
+
+	column remarks
+		dataType: string
+		lineageTag: 1fda52a8-a07b-4094-a610-5bd71028f721
+		sourceLineageTag: remarks
+		summarizeBy: none
+		sourceColumn: remarks
+
+		annotation SummarizationSetBy = Automatic
+
+	partition sales_fact = entity
+		mode: directLake
+		source
+			entityName: sales_fact
+			schemaName: dbo
+			expressionSource: 'DirectLake - lh_sales_dev'
+
